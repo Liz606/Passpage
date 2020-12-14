@@ -139,7 +139,7 @@
         <v-container id="TwoDCode">
           <div class="code-wrap">
             <div class="title">行人二维码</div>
-            <img class="img" src="fleeUestc/2code.png" width="150" height="150">
+            <img class="img" src="fleeUestc/2code.png" width="200" height="200">
             <div class="text">二维码剩余有效时间<span id="ristTime"></span>秒</div>
             <v-btn color="#0AC2A3" class="white--text theme-light">查看通行规则</v-btn>
           </div>
@@ -393,13 +393,15 @@
       padding: 10px;
       border-radius: 2px;
     }
-
+    .code-wrap .title{
+      font-weight: bold;
+    }
     .img {
       margin: 10px 0;
     }
 
     .text {
-      font-size: 12px;
+      font-size: 14px;
       padding-bottom: 10px;
     }
   </style>
