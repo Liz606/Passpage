@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <!-- saved from url=(0029)http://fleeuestc.numbguy.top/ -->
 <!-- 在http://fleeuestc.numbguy.top/基础上添加了一个假按钮，只为更方便的想去哪就去哪！ （手动狗头）-->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>平安成电智慧通行</title>
@@ -21,124 +24,125 @@
   <button onclick="disableElement()">禁用</button>
   <button onclick="radiochange()">test</button> -->
 
-  <div class="outer">
-    <div class="container">
-      <div>
-
-      </div>
-
-
-      <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
-      获取头像昵称 
-      </button> -->
-      <block>
-        <div class="usermotto">
-          <!-- <text class="user-motto">{{motto}}</text> -->
-          <text class="auth" id="auth">研究生用户，入校授权有效！</text>
-        </div>
-        <!-- <div class="divLine"></div> -->
-        <hr align="center" color="#E0E3DA" size="0.5">
-
-        <div class="table">
-          <block>
-            <div class="tr">
-              <div class="td-left">
-                <div class="icon">
-                  <img src="fleeUestc/user.png" mode="aspectFill"> 
-                </div>
-              </div>
-              <div class="td-mid">
-                <div class="user-left">用户姓名</div>
-              </div>
-              <div class="td-right">
-                <div id="user-right" class="user-right">蒙多想去哪就去哪</div>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td-left">
-                <div class="icon">
-                  <img src="fleeUestc/register.png" mode="aspectFill"> 
-                </div>
-              </div>
-              <div class="td-mid">
-                <div class="register-left">登记类型</div>
-              </div>
-              <div class="td-right">
-                <div class="register-right">研究生（硕士）</div>
-              </div>
-            </div>
-            <div class="tr">
-              <div class="td-left">
-                <div class="icon">
-                  <img src="fleeUestc/time.png" mode="aspectFill"> 
-                </div>
-              </div>
-              <div class="td-mid">
-                <div class="time-left">登记时间</div>
-              </div>
-              <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
-              <div class="td-right">
-                <!-- <div class="scrolltxt">
-                  <div class="marquee_box">
-                    <div class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
-                      <text>{{text}}</text>
-                      <text style="margin-right:{{marquee_margin}}px;"></text>
-                      <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
-                    </div>
-                  </div>
-                </div> -->
-                <marquee>
-                  <div id="time" style="font-weight: bolder;font-size: 20px;color: #09B094;" behavior="scroll"><p id="sy_time" style="font-weight: bolder;font-size: 20px;color: #09B094;"></p></div>
-                </marquee>
-              </div>
-            </div>
-          </block>
-        </div>
-      </block>
-    </div>
-  </div>
- <div id="app">
+  <div id="app">
     <v-app>
       <v-main>
-        <v-container>
+        <v-container id="main">
+          <div class="outer">
+            <div class="container">
+              <!-- <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 
+              获取头像昵称 
+              </button> -->
+              <div>
+                <div class="usermotto">
+                  <!-- <text class="user-motto">{{motto}}</text> -->
+                  <div class="auth" id="auth">研究生用户，入校授权有效！</div>
+                </div>
+                <!-- <div class="divLine"></div> -->
+                <hr align="center" color="#E0E3DA" size="0.5">
+
+                <div class="table">
+                  <div class="tr">
+                    <div class="td-left">
+                      <div class="icon">
+                        <img src="fleeUestc/user.png" mode="aspectFill">
+                      </div>
+                    </div>
+                    <div class="td-mid">
+                      <div class="user-left">用户姓名</div>
+                    </div>
+                    <div class="td-right">
+                      <div id="user-right" class="user-right">蒙多想去哪就去哪</div>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td-left">
+                      <div class="icon">
+                        <img src="fleeUestc/register.png" mode="aspectFill">
+                      </div>
+                    </div>
+                    <div class="td-mid">
+                      <div class="register-left">登记类型</div>
+                    </div>
+                    <div class="td-right">
+                      <div class="register-right">研究生（硕士）</div>
+                    </div>
+                  </div>
+                  <div class="tr">
+                    <div class="td-left">
+                      <div class="icon">
+                        <img src="fleeUestc/time.png" mode="aspectFill">
+                      </div>
+                    </div>
+                    <div class="td-mid">
+                      <div class="time-left">登记时间</div>
+                    </div>
+                    <!-- <div class="td-right"><div class="time-right">{{text}}</div></div> -->
+                    <div class="td-right">
+                      <!-- <div class="scrolltxt">
+                          <div class="marquee_box">
+                            <div class="marquee_text" style="transform: translateX(-{{marqueeDistance}}px)">
+                              <text>{{text}}</text>
+                              <text style="margin-right:{{marquee_margin}}px;"></text>
+                              <text style="margin-right:{{marquee_margin}}px;">{{text}}</text>
+                            </div>
+                          </div>
+                        </div> -->
+                      <marquee>
+                        <div id="time" style="font-weight: bolder;font-size: 20px;color: #09B094;" behavior="scroll">
+                          <p id="sy_time" style="font-weight: bolder;font-size: 20px;color: #09B094;"></p>
+                        </div>
+                      </marquee>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <v-row justify="center">
-            <v-btn color="#0AC2A3" class="white--text theme-light">前往个人二维码</v-btn>
+            <v-btn color="#0AC2A3" id="handleOpen2DCode" class="white--text theme-light">前往个人二维码</v-btn>
           </v-row>
           <br />
           <div class="info">
-        	<div style="background:#FFF; color:#000">
-        		<v-row color="white" align="center" justify="center">
-                  <span>输入姓名自动替换</span>
-                </v-row>
-                <v-row color="white" align="center" justify="center">
-                  <span>点击确认隐藏</span>
-                </v-row>
-                <v-row color="white" align="center" justify="center">
-                  <input style="border:0.5px solid #378888" type="text" id="custom-name-input" oninput="namechange()"/>
-                </v-row>
-                <br />
-                <v-row color="white" align="center" justify="center">
-                  <v-btn id="infoselected" color="#0AC2A3" class="white--text theme-light">确认</v-btn>
-                </v-row>
-                <br />
-          <!--<div class="io">-->
-          <!--  <td>-->
+            <div style="background:#FFF; color:#000">
+              <v-row color="white" align="center" justify="center">
+                <span>输入姓名自动替换</span>
+              </v-row>
+              <v-row color="white" align="center" justify="center">
+                <span>点击确认隐藏</span>
+              </v-row>
+              <v-row color="white" align="center" justify="center">
+                <input style="border:0.5px solid #378888" type="text" id="custom-name-input" oninput="namechange()" />
+              </v-row>
+              <br />
+              <v-row color="white" align="center" justify="center">
+                <v-btn id="infoselected" color="#0AC2A3" class="white--text theme-light">确认</v-btn>
+              </v-row>
+              <br />
+              <!--<div class="io">-->
+              <!--  <td>-->
 
-          <!--    <input name="io" value="1" type="radio" οnclick="radiochange()">-->
-          <!--    <label>我从哪里来</label><br>-->
-          <!--    <input name="io" value="0" type="radio" οnclick="radiochange()">-->
-          <!--    <label for="sex">我要到哪里去</label><br>-->
+              <!--    <input name="io" value="1" type="radio" οnclick="radiochange()">-->
+              <!--    <label>我从哪里来</label><br>-->
+              <!--    <input name="io" value="0" type="radio" οnclick="radiochange()">-->
+              <!--    <label for="sex">我要到哪里去</label><br>-->
 
-          <!--  </td>-->
-          <!--</div>-->
+              <!--  </td>-->
+              <!--</div>-->
 
             </div>
           </div>
           <v-row justify="center">
-          <img src="fleeUestc/uestc.png" width="50" height="50"> 
-      	  </v-row>
-
-
+            <img src="fleeUestc/uestc.png" width="50" height="50">
+          </v-row>
+        </v-container>
+        <v-container id="TwoDCode">
+          <div class="code-wrap">
+            <div class="title">行人二维码</div>
+            <img class="img" src="fleeUestc/2code.png" width="150" height="150">
+            <div class="text">二维码剩余有效时间<span id="ristTime"></span>秒</div>
+            <v-btn color="#0AC2A3" class="white--text theme-light">查看通行规则</v-btn>
+          </div>
         </v-container>
       </v-main>
     </v-app>
@@ -155,228 +159,251 @@
 
 
 
-<script src="fleeUestc/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="utils/util.js"></script> -->
-<script type="text/javascript" src="fleeUestc/index.js"></script>
+  <script src="fleeUestc/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="utils/util.js"></script> -->
+  <script type="text/javascript" src="fleeUestc/index.js"></script>
 
 
-<script type="text/javascript">
-	function getTime(){ 
-   var p = document.getElementById("sy_time"); 
-   time = new Date(); 
-   year = time.getFullYear(); 
-   month = ('0'+(time.getMonth() + 1)).slice(-2); 
-   day = ('0'+time.getDate()).slice(-2); 
-   hour = ('0'+time.getHours()).slice(-2); 
-   minutes = ('0'+time.getMinutes()).slice(-2); 
-   seconds = ('0'+time.getSeconds()).slice(-2); 
-   str = year +"-"+ month +"-"+ day + " " +hour+":"+minutes+":"+seconds; 
-   p.innerText = str; 
-   setTimeout(getTime,1000); 
- } 
- window.onload = function(){ 
-   getTime(); 
- }
-</script>
+  <script type="text/javascript">
+    function getTime() {
+      var p = document.getElementById("sy_time");
+      time = new Date();
+      year = time.getFullYear();
+      month = ('0' + (time.getMonth() + 1)).slice(-2);
+      day = ('0' + time.getDate()).slice(-2);
+      hour = ('0' + time.getHours()).slice(-2);
+      minutes = ('0' + time.getMinutes()).slice(-2);
+      seconds = ('0' + time.getSeconds()).slice(-2);
+      str = year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + seconds;
+      p.innerText = str;
+      setTimeout(getTime, 1000);
+    }
+    window.onload = function () {
+      getTime();
+    }
+  </script>
 
 
-<style>
-  /**index.wxss**/
-  .custom-name {
-    display: flex;
-  }
+  <style>
+    /**index.wxss**/
+    .custom-name {
+      display: flex;
+    }
 
-  .info {
-    background-color: rgba(0,0,0,1);
-  }
+    .info {
+      background-color: rgba(0, 0, 0, 1);
+    }
 
-  .userinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+    .userinfo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-  .userinfo-avatar {
-    width: 128rpx;
-    height: 128rpx;
-    margin: 20rpx;
-    border-radius: 50%;
-  }
+    .userinfo-avatar {
+      width: 128rpx;
+      height: 128rpx;
+      margin: 20rpx;
+      border-radius: 50%;
+    }
 
-  .userinfo-nickname {
-    color: #aaa;
-  }
+    .userinfo-nickname {
+      color: #aaa;
+    }
 
-  .usermotto {
-    /* flex: center; */
-    margin-top: 50px;
-    margin-bottom: 40px;
-    font-size: 22px;
+    .usermotto {
+      /* flex: center; */
+      margin-top: 50px;
+      margin-bottom: 40px;
+      font-size: 22px;
 
-  }
+    }
 
-  .auth {
-    color: #008900;
-    font-weight: bold;
-    font-size: 25px;
-    text-align: center;
-  }
+    .auth {
+      color: #008900;
+      font-weight: bold;
+      font-size: 25px;
+      text-align: center;
+    }
 
-  .divLine {
-    background: #E0E3DA;
-    width: 100%;
-    height: 3rpx;
-  }
+    .divLine {
+      background: #E0E3DA;
+      width: 100%;
+      height: 3rpx;
+    }
 
-  .icon {
-    /* display:flex;  */
-    /* display: contents;                   */
-    justify-content: center;
-    /* flex-grow: 1; */
+    .icon {
+      /* display:flex;  */
+      /* display: contents;                   */
+      justify-content: center;
+      /* flex-grow: 1; */
 
-    /* margin-left: 5px; */
-  }
+      /* margin-left: 5px; */
+    }
 
-  .icon image {
-    width: 25px;
-    height: 25px;
-  }
+    .icon image {
+      width: 25px;
+      height: 25px;
+    }
 
-  .user {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+    .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
 
-  }
+    }
 
-  .user-left {
-    font-family: "黑体";
-    color: #000;
-    font-size: 40rpx;
-    flex-grow: 2;
-
-
-  }
-
-  .user-right {
-    font-family: "黑体";
-    color: #000;
-    font-size: 25px;
-    align-items: right;
-    font-weight: 900;
-    flex-grow: 3;
-    margin-right: 10px;
-  }
-
-  .register {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-
-  }
-
-  .register-left {
-    font-family: "黑体";
-    color: #000;
-    font-size: 40rpx;
-  }
-
-  .register-right {
-    font-family: "黑体";
-    color: #000;
-    font-size: 25px;
-    align-items: right;
-    font-weight: 900;
-  }
-
-  .time {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .time-left {
-    font-family: "黑体";
-    color: #000;
-    font-size: 40rpx;
-
-  }
-
-  .time-right {
-    font-family: "黑体";
-    color: #09B094;
-    /* font-size: 60rpx; */
-    align-items: right;
-    font-weight: bold;
-  }
-
-  /* 09B094 */
+    .user-left {
+      font-family: "黑体";
+      color: #000;
+      font-size: 40rpx;
+      flex-grow: 2;
 
 
+    }
 
+    .user-right {
+      font-family: "黑体";
+      color: #000;
+      font-size: 25px;
+      align-items: right;
+      font-weight: 900;
+      flex-grow: 3;
+      margin-right: 10px;
+    }
 
-  /*table*/
-  .table {
-    width: 100%;
-    border: 0px solid darkgray;
-  }
+    .register {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
 
-  .tr {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    height: 3rem;
-    align-items: center;
-  }
+    }
 
-  .td-left {
-    width: 5%;
-    justify-content: center;
-    text-align: center;
-  }
+    .register-left {
+      font-family: "黑体";
+      color: #000;
+      font-size: 40rpx;
+    }
 
-  .td-mid {
-    width: 35%;
-    justify-content: center;
-    text-align: center;
-  }
+    .register-right {
+      font-family: "黑体";
+      color: #000;
+      font-size: 25px;
+      align-items: right;
+      font-weight: 900;
+    }
 
-  .td-right {
-    width: 60%;
-    justify-content: center;
-    text-align: right;
-  }
+    .time {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .time-left {
+      font-family: "黑体";
+      color: #000;
+      font-size: 40rpx;
+
+    }
+
+    .time-right {
+      font-family: "黑体";
+      color: #09B094;
+      /* font-size: 60rpx; */
+      align-items: right;
+      font-weight: bold;
+    }
+
+    /* 09B094 */
 
 
 
-  .scrolltxt {
-    padding: 0 20rpx;
-    background: transparent;
-  }
 
-  .marquee_box {
-    position: relative;
-    font-size: 80rpx;
-    color: #09B094;
-    font-weight: bold;
-    height: 90rpx;
-    display: block;
-    overflow: hidden;
-  }
+    /*table*/
+    .table {
+      width: 100%;
+      border: 0px solid darkgray;
+    }
 
-  .marquee_text {
-    white-space: nowrap;
-    position: absolute;
-    top: 0;
-    font-size: 20px;
-    height: 90rpx;
-    line-height: 90rpx;
-  }
-</style>
+    .tr {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      height: 3rem;
+      align-items: center;
+    }
 
-</body></html>
+    .td-left {
+      width: 5%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .td-mid {
+      width: 35%;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .td-right {
+      width: 60%;
+      justify-content: center;
+      text-align: right;
+    }
+
+
+
+    .scrolltxt {
+      padding: 0 20rpx;
+      background: transparent;
+    }
+
+    .marquee_box {
+      position: relative;
+      font-size: 80rpx;
+      color: #09B094;
+      font-weight: bold;
+      height: 90rpx;
+      display: block;
+      overflow: hidden;
+    }
+
+    .marquee_text {
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      font-size: 20px;
+      height: 90rpx;
+      line-height: 90rpx;
+    }
+
+    /* code */
+    #TwoDCode {
+      display: none;
+    }
+
+    .code-wrap {
+      text-align: center;
+      box-shadow: 0px 0px 5px #a0a0a0;
+      padding: 10px;
+      border-radius: 2px;
+    }
+
+    .img {
+      margin: 10px 0;
+    }
+
+    .text {
+      font-size: 12px;
+      padding-bottom: 10px;
+    }
+  </style>
+
+</body>
+
+</html>
